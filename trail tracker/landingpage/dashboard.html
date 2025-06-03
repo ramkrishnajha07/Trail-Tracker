@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrailTracker Dashboard</title>
+
+  <link rel="stylesheet" href="../css/dashboard.css" />
+
+  
+  <style>
+    .map-container {
+      width: 60%;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      left: 20%;
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">TrailTracker</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#myTripsSlide">My Trips</a>
+      <a href="#mapSlide" id="mapNavLink">Map View</a>
+      <a href="#">Settings</a>
+    </div>
+  </nav>
+
+  <!-- Greeting Slide -->
+  <section class="hero">
+    <div class="greeting-container">
+      <h1 id="greetingText">Hello, Traveler!</h1>
+    </div>
+  </section>
+
+  <!-- Slide 2: My Trips -->
+  <section class="slide" id="myTripsSlide">
+    <div class="my-trips-header">
+      <h2>My Trips</h2>
+      <button id="addTripBtn">+ Add New Trip</button>
+    </div>
+    <div id="tripList" class="trip-list">
+      <!-- Trip cards will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Trip Modal -->
+  <div id="tripModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Add New Trip</h3>
+      <form id="tripForm">
+        <input type="text" id="tripTitle" placeholder="Trip Title" required />
+        <input type="date" id="tripDate" required />
+        <input type="text" id="tripLocation" placeholder="Location" required />
+        <button type="submit">Save Trip</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Slide 3: Map View
+  <section class="slide" id="mapSlide">
+    <div id="map">
+    <div class="map-header">
+      <h2>Trip Map</h2>
+    </div>
+    <div
+      id="map"
+      style="
+        height: 400px;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      "
+    ></div>
+    </div>
+  </section>
+
+   Leaflet JS -->
+  <!-- <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-o8+EtElJM4yKh6N7b+0CecxH+zlwkz9LP1T+UX3P+1Y="
+    crossorigin=""
+    defer
+  ></script> -->
+  <h2 text align=center>Trip Map</h2>
+  <div class="map-container">
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110204.75443564197!2d77.934733166923!3d30.325402625661233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1748897971902!5m2!1sen!2sin"
+      height="250px" weidth="250px" style="border:1;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Your JS -->
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+
+</html>

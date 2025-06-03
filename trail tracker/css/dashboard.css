@@ -1,0 +1,180 @@
+/* dashboard.css */
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f8fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Slide Base */
+.slide {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+/* Slide 1 - Hero Greeting */
+.hero {
+  background: url('../images/dashboard.jpeg') no-repeat center center/cover;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.greeting-container h1 {
+  font-size: 2.5rem;
+}
+
+/* Slide 2 - My Trips */
+#myTripsSlide {
+  background-color: #96c8fa;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* My Trips Header */
+.my-trips-header {
+  color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#addTripBtn {
+  background-color: #2980b9;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#addTripBtn:hover {
+  background-color: #3498db;
+}
+
+/* Trip List */
+.trip-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Trip Cards */
+.trip-card {
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: default;
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.trip-card:hover {
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.5);
+}
+
+.trip-card h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+.modal-content form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.modal-content form button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-content form button:hover {
+  background-color: #3498db;
+}
